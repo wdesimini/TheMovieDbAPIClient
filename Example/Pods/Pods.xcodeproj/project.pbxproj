@@ -50,8 +50,8 @@
 		1B8465190E396F85D326CA701E5A40AC /* Pods-TheMovieDbAPIClient_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheMovieDbAPIClient_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		2DC296BDA5BC40698B0E5E801B6CA1CE /* Pods-TheMovieDbAPIClient_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TheMovieDbAPIClient_Tests-dummy.m"; sourceTree = "<group>"; };
 		47ED3417C483FF487A450161BF9026D3 /* TheMovieDbAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TheMovieDbAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4BF33F750D7B53871C81C1941438BFAA /* Pods-TheMovieDbAPIClient_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TheMovieDbAPIClient_Example"; path = Pods_TheMovieDbAPIClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		568C88B04653639121DB90811ADD5107 /* Pods-TheMovieDbAPIClient_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TheMovieDbAPIClient_Tests"; path = Pods_TheMovieDbAPIClient_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BF33F750D7B53871C81C1941438BFAA /* Pods_TheMovieDbAPIClient_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovieDbAPIClient_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		568C88B04653639121DB90811ADD5107 /* Pods_TheMovieDbAPIClient_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovieDbAPIClient_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		594D4640BEE68ED0E3A0F522AFD6054D /* TheMovieDbAPIClient.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TheMovieDbAPIClient.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		61004380D6C053860EA28012B4702742 /* Pods-TheMovieDbAPIClient_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TheMovieDbAPIClient_Example-dummy.m"; sourceTree = "<group>"; };
 		69714FA9143FC57A4BE05AF05C1666A7 /* TheMovieDbAPIClient.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TheMovieDbAPIClient.modulemap; sourceTree = "<group>"; };
@@ -243,8 +243,8 @@
 		E6E9CEBD0E417B404FD5063DDE11C547 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4BF33F750D7B53871C81C1941438BFAA /* Pods-TheMovieDbAPIClient_Example */,
-				568C88B04653639121DB90811ADD5107 /* Pods-TheMovieDbAPIClient_Tests */,
+				4BF33F750D7B53871C81C1941438BFAA /* Pods_TheMovieDbAPIClient_Example.framework */,
+				568C88B04653639121DB90811ADD5107 /* Pods_TheMovieDbAPIClient_Tests.framework */,
 				47ED3417C483FF487A450161BF9026D3 /* TheMovieDbAPIClient.framework */,
 			);
 			name = Products;
@@ -313,7 +313,7 @@
 			);
 			name = "Pods-TheMovieDbAPIClient_Tests";
 			productName = Pods_TheMovieDbAPIClient_Tests;
-			productReference = 568C88B04653639121DB90811ADD5107 /* Pods-TheMovieDbAPIClient_Tests */;
+			productReference = 568C88B04653639121DB90811ADD5107 /* Pods_TheMovieDbAPIClient_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B2BD4F4F4C8C357D6B8B9A363FB8BE96 /* Pods-TheMovieDbAPIClient_Example */ = {
@@ -332,7 +332,7 @@
 			);
 			name = "Pods-TheMovieDbAPIClient_Example";
 			productName = Pods_TheMovieDbAPIClient_Example;
-			productReference = 4BF33F750D7B53871C81C1941438BFAA /* Pods-TheMovieDbAPIClient_Example */;
+			productReference = 4BF33F750D7B53871C81C1941438BFAA /* Pods_TheMovieDbAPIClient_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C86C4E489622EF30DB9D562E90E6379F /* TheMovieDbAPIClient */ = {
@@ -360,7 +360,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					C86C4E489622EF30DB9D562E90E6379F = {
 						LastSwiftMigration = 1250;
@@ -512,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -540,7 +540,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TheMovieDbAPIClient_Example/Pods-TheMovieDbAPIClient_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TheMovieDbAPIClient_Example/Pods-TheMovieDbAPIClient_Example.modulemap";
@@ -573,7 +573,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TheMovieDbAPIClient_Tests/Pods-TheMovieDbAPIClient_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TheMovieDbAPIClient_Tests/Pods-TheMovieDbAPIClient_Tests.modulemap";
@@ -606,7 +606,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TheMovieDbAPIClient/TheMovieDbAPIClient-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TheMovieDbAPIClient/TheMovieDbAPIClient-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TheMovieDbAPIClient/TheMovieDbAPIClient.modulemap";
 				PRODUCT_MODULE_NAME = TheMovieDbAPIClient;
@@ -636,7 +636,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TheMovieDbAPIClient_Tests/Pods-TheMovieDbAPIClient_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TheMovieDbAPIClient_Tests/Pods-TheMovieDbAPIClient_Tests.modulemap";
@@ -668,7 +668,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TheMovieDbAPIClient_Example/Pods-TheMovieDbAPIClient_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TheMovieDbAPIClient_Example/Pods-TheMovieDbAPIClient_Example.modulemap";
@@ -735,7 +735,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -761,7 +761,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TheMovieDbAPIClient/TheMovieDbAPIClient-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TheMovieDbAPIClient/TheMovieDbAPIClient-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TheMovieDbAPIClient/TheMovieDbAPIClient.modulemap";
 				PRODUCT_MODULE_NAME = TheMovieDbAPIClient;
