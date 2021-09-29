@@ -20,7 +20,7 @@ public struct TMDBSearchMovieResponse: Codable {
         case totalResults
     }
 
-    public init(
+    init(
         page: Int,
         results: [TMDBMovieSearchResult],
         totalPages: Int,
@@ -65,7 +65,7 @@ extension TMDBSearchMovieResponse {
             case voteCount
         }
 
-        public init(
+        init(
             adult: Bool,
             backdropPath: String?,
             genreIds: [Int],
