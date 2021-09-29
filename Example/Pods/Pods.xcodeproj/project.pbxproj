@@ -19,6 +19,8 @@
 		CFF7F5242704DEEF00DA2C73 /* TMDBAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7F5232704DEEF00DA2C73 /* TMDBAPIRequest.swift */; };
 		CFF7F5682705058800DA2C73 /* TMDBMovieWatchProvidersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7F5672705058800DA2C73 /* TMDBMovieWatchProvidersRequest.swift */; };
 		CFF7F56F270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7F56E270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift */; };
+		CFF7F5A32705228600DA2C73 /* TMDBConfigurationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7F5A22705228600DA2C73 /* TMDBConfigurationRequest.swift */; };
+		CFF7F5AC270522B200DA2C73 /* TMDBConfigurationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7F5AB270522B200DA2C73 /* TMDBConfigurationResponse.swift */; };
 		DB90F07780AD11DDFC0A294C9490DF3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		EBFF606A2C6AE9C653946F931D151A82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		EF170B522704DAA20059D7F9 /* TMDBAPINetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF170B512704DAA20059D7F9 /* TMDBAPINetworkService.swift */; };
@@ -74,6 +76,8 @@
 		CFF7F5232704DEEF00DA2C73 /* TMDBAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIRequest.swift; sourceTree = "<group>"; };
 		CFF7F5672705058800DA2C73 /* TMDBMovieWatchProvidersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovieWatchProvidersRequest.swift; sourceTree = "<group>"; };
 		CFF7F56E270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovieWatchProvidersResponse.swift; sourceTree = "<group>"; };
+		CFF7F5A22705228600DA2C73 /* TMDBConfigurationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBConfigurationRequest.swift; sourceTree = "<group>"; };
+		CFF7F5AB270522B200DA2C73 /* TMDBConfigurationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBConfigurationResponse.swift; sourceTree = "<group>"; };
 		DE4C5FD4E1D9835E3A6CBB3EE69B7597 /* TheMovieDbAPIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TheMovieDbAPIClient.debug.xcconfig; sourceTree = "<group>"; };
 		E009803153F9BD1DE92C802AD6FE2816 /* TheMovieDbAPIClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TheMovieDbAPIClient-dummy.m"; sourceTree = "<group>"; };
 		E7276B4C54FACA3D1BC1252DE4A6489F /* Pods-TheMovieDbAPIClient_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TheMovieDbAPIClient_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 		CFF7F50E2704DBF700DA2C73 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				CFF7F5A72705228F00DA2C73 /* Configuration */,
 				CFF7F557270504D000DA2C73 /* Movie */,
 				CFF7F5302704E1CB00DA2C73 /* Search */,
 			);
@@ -252,6 +257,15 @@
 				CFF7F56E270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift */,
 			);
 			path = WatchProviders;
+			sourceTree = "<group>";
+		};
+		CFF7F5A72705228F00DA2C73 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7F5A22705228600DA2C73 /* TMDBConfigurationRequest.swift */,
+				CFF7F5AB270522B200DA2C73 /* TMDBConfigurationResponse.swift */,
+			);
+			path = Configuration;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -458,8 +472,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFF7F5682705058800DA2C73 /* TMDBMovieWatchProvidersRequest.swift in Sources */,
+				CFF7F5A32705228600DA2C73 /* TMDBConfigurationRequest.swift in Sources */,
 				CFF7F5242704DEEF00DA2C73 /* TMDBAPIRequest.swift in Sources */,
 				EF170B522704DAA20059D7F9 /* TMDBAPINetworkService.swift in Sources */,
+				CFF7F5AC270522B200DA2C73 /* TMDBConfigurationResponse.swift in Sources */,
 				CFF7F56F270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift in Sources */,
 				4E7F0B7667FAC3191F9F495AF679AD14 /* TMDBAPIService.swift in Sources */,
 				CFF7F51F2704DD0200DA2C73 /* TMDBSearchMovieRequest.swift in Sources */,
