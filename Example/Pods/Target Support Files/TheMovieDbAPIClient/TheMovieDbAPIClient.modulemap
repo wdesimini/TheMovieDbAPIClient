@@ -1,0 +1,6 @@
+framework module TheMovieDbAPIClient {
+  umbrella header "TheMovieDbAPIClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

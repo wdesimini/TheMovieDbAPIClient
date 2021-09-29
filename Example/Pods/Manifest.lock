@@ -1,0 +1,16 @@
+PODS:
+  - TheMovieDbAPIClient (0.1.0)
+
+DEPENDENCIES:
+  - TheMovieDbAPIClient (from `../`)
+
+EXTERNAL SOURCES:
+  TheMovieDbAPIClient:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TheMovieDbAPIClient: b3eeb9ff9faf14edb84d09c653ddb4390c8ec15b
+
+PODFILE CHECKSUM: fec0888fcf314fd2690152e23cd4a590f26426a8
+
+COCOAPODS: 1.11.2
