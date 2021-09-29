@@ -17,6 +17,10 @@
 		CC578A0C3A6511803D67FCC3F7402EEE /* Pods-TheMovieDbAPIClient_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C650116478BEBE1F579F35295584BA9 /* Pods-TheMovieDbAPIClient_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB90F07780AD11DDFC0A294C9490DF3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		EBFF606A2C6AE9C653946F931D151A82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EF170B522704DAA20059D7F9 /* TMDBAPINetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF170B512704DAA20059D7F9 /* TMDBAPINetworkService.swift */; };
+		EF170B542704DAD90059D7F9 /* TMDBAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF170B532704DAD90059D7F9 /* TMDBAPIRequest.swift */; };
+		EF170B562704DAF60059D7F9 /* TMDBAPISearchMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF170B552704DAF60059D7F9 /* TMDBAPISearchMovieRequest.swift */; };
+		EF170B582704DB100059D7F9 /* TMDBSearchMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF170B572704DB100059D7F9 /* TMDBSearchMovieResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		E009803153F9BD1DE92C802AD6FE2816 /* TheMovieDbAPIClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TheMovieDbAPIClient-dummy.m"; sourceTree = "<group>"; };
 		E7276B4C54FACA3D1BC1252DE4A6489F /* Pods-TheMovieDbAPIClient_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TheMovieDbAPIClient_Example-umbrella.h"; sourceTree = "<group>"; };
 		E82EC5D3A525DFF3E3C1250A78EC4CB8 /* Pods-TheMovieDbAPIClient_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TheMovieDbAPIClient_Tests.modulemap"; sourceTree = "<group>"; };
+		EF170B512704DAA20059D7F9 /* TMDBAPINetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPINetworkService.swift; sourceTree = "<group>"; };
+		EF170B532704DAD90059D7F9 /* TMDBAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIRequest.swift; sourceTree = "<group>"; };
+		EF170B552704DAF60059D7F9 /* TMDBAPISearchMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPISearchMovieRequest.swift; sourceTree = "<group>"; };
+		EF170B572704DB100059D7F9 /* TMDBSearchMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSearchMovieResponse.swift; sourceTree = "<group>"; };
 		EFEB84700C8F8537EAE3E751B10DF71B /* Pods-TheMovieDbAPIClient_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TheMovieDbAPIClient_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		FF2F689F144AD4F4405E3D262E85F430 /* TheMovieDbAPIClient-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TheMovieDbAPIClient-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,7 +199,11 @@
 		CFE785642704CCC200807548 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EF170B512704DAA20059D7F9 /* TMDBAPINetworkService.swift */,
+				EF170B532704DAD90059D7F9 /* TMDBAPIRequest.swift */,
+				EF170B552704DAF60059D7F9 /* TMDBAPISearchMovieRequest.swift */,
 				BA2306694FAF53D73F21D1B8D26AE77E /* TMDBAPIService.swift */,
+				EF170B572704DB100059D7F9 /* TMDBSearchMovieResponse.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -391,7 +403,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF170B522704DAA20059D7F9 /* TMDBAPINetworkService.swift in Sources */,
+				EF170B542704DAD90059D7F9 /* TMDBAPIRequest.swift in Sources */,
 				4E7F0B7667FAC3191F9F495AF679AD14 /* TMDBAPIService.swift in Sources */,
+				EF170B562704DAF60059D7F9 /* TMDBAPISearchMovieRequest.swift in Sources */,
+				EF170B582704DB100059D7F9 /* TMDBSearchMovieResponse.swift in Sources */,
 				A43B8D5491CABDF460C55E02B8A9A417 /* TheMovieDbAPIClient-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
