@@ -199,13 +199,45 @@
 		CFE785642704CCC200807548 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				EF170B512704DAA20059D7F9 /* TMDBAPINetworkService.swift */,
-				EF170B532704DAD90059D7F9 /* TMDBAPIRequest.swift */,
-				EF170B552704DAF60059D7F9 /* TMDBAPISearchMovieRequest.swift */,
-				BA2306694FAF53D73F21D1B8D26AE77E /* TMDBAPIService.swift */,
-				EF170B572704DB100059D7F9 /* TMDBSearchMovieResponse.swift */,
+				CFF7F50E2704DBF700DA2C73 /* API */,
+				CFF7F5032704DBCC00DA2C73 /* Network */,
+				CFF7F50A2704DBE200DA2C73 /* Request */,
+				CFF7F5122704DBFE00DA2C73 /* Response */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		CFF7F5032704DBCC00DA2C73 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EF170B512704DAA20059D7F9 /* TMDBAPINetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CFF7F50A2704DBE200DA2C73 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EF170B532704DAD90059D7F9 /* TMDBAPIRequest.swift */,
+				EF170B552704DAF60059D7F9 /* TMDBAPISearchMovieRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		CFF7F50E2704DBF700DA2C73 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BA2306694FAF53D73F21D1B8D26AE77E /* TMDBAPIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CFF7F5122704DBFE00DA2C73 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				EF170B572704DB100059D7F9 /* TMDBSearchMovieResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
