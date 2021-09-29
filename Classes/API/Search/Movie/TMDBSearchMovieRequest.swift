@@ -21,9 +21,8 @@ public struct TMDBSearchMovieAPIRequest: TMDBAPIRequest {
         "search/movie"
     }
     
-    public func headers(apiKey: String) -> [String : String] {
+    public var headers: [String : String] {
         [
-            "api_key": apiKey,
             "page": page,
             "query": query,
         ]

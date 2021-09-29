@@ -30,7 +30,8 @@ public final class TMDBAPIService {
     private func url<T: TMDBAPIRequest>(from request: T) -> URL {
         let url = URL(string: request.path, relativeTo: baseURL)!
         var components = URLComponents(url: url, resolvingAgainstBaseURL: true)!
-        let headers = request.headers(apiKey: apiKey)
+        var headers = request.headers
+        headers["api_key"] = apiKey
         components.queryItems = headers.map { URLQueryItem(name: $0, value: $1) }
         return components.url!
     }

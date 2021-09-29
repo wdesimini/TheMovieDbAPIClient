@@ -10,6 +10,6 @@ import Foundation
 public protocol TMDBAPIRequest {
     associatedtype Response: Decodable
     typealias ResponseHandler = (Result<Response?, Error>) -> Void
+    var headers: [String: String] { get }
     var path: String { get }
-    func headers(apiKey: String) -> [String: String]
 }
