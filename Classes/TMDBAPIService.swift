@@ -1,5 +1,4 @@
-
-// MARK:- API
+import Foundation
 
 public final class TMDBAPIService {
     private let apiKey: String
@@ -10,7 +9,7 @@ public final class TMDBAPIService {
         self.apiKey = apiKey
     }
     
-    public func execute<T: TMDBAPIRequest>(request: T, completion: @escaping T.ResponseHandler) {
+    public func execute<T: TMDBAPIRequest>(request: T, completion: @escaping T.ResponseHandler) { 
         let url = self.url(from: request)
         
         network.sendRequest(url: url) { result in

@@ -1,18 +1,19 @@
 //
-//  TMDBAPISearchMovieRequest.swift
+//  TMDBSearchMovieRequest.swift
 //  TheMovieDbAPIClient
 //
-//  Created by Desimini, Wilson on 9/29/21.
+//  Created by Wilson Desimini on 9/29/21.
 //
 
 import Foundation
 
-public struct TMDBAPISearchMovieRequest: TMDBAPIRequest {
+public struct TMDBSearchMovieAPIRequest: TMDBAPIRequest {
     public typealias Response = TMDBSearchMovieResponse
-    public let page = "1"
+    public let page: String
     public let query: String
     
-    public init(query: String) {
+    public init(page: Int = 1, query: String) {
+        self.page = String(page)
         self.query = query
     }
     
