@@ -17,6 +17,8 @@
 		CC578A0C3A6511803D67FCC3F7402EEE /* Pods-TheMovieDbAPIClient_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C650116478BEBE1F579F35295584BA9 /* Pods-TheMovieDbAPIClient_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFF7F51F2704DD0200DA2C73 /* TMDBSearchMovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7F51E2704DD0200DA2C73 /* TMDBSearchMovieRequest.swift */; };
 		CFF7F5242704DEEF00DA2C73 /* TMDBAPIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7F5232704DEEF00DA2C73 /* TMDBAPIRequest.swift */; };
+		CFF7F5682705058800DA2C73 /* TMDBMovieWatchProvidersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7F5672705058800DA2C73 /* TMDBMovieWatchProvidersRequest.swift */; };
+		CFF7F56F270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFF7F56E270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift */; };
 		DB90F07780AD11DDFC0A294C9490DF3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		EBFF606A2C6AE9C653946F931D151A82 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		EF170B522704DAA20059D7F9 /* TMDBAPINetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF170B512704DAA20059D7F9 /* TMDBAPINetworkService.swift */; };
@@ -70,6 +72,8 @@
 		CEC9DF89D22FEF709F55F8DE7777B1BD /* Pods-TheMovieDbAPIClient_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TheMovieDbAPIClient_Example.release.xcconfig"; sourceTree = "<group>"; };
 		CFF7F51E2704DD0200DA2C73 /* TMDBSearchMovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBSearchMovieRequest.swift; sourceTree = "<group>"; };
 		CFF7F5232704DEEF00DA2C73 /* TMDBAPIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBAPIRequest.swift; sourceTree = "<group>"; };
+		CFF7F5672705058800DA2C73 /* TMDBMovieWatchProvidersRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovieWatchProvidersRequest.swift; sourceTree = "<group>"; };
+		CFF7F56E270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBMovieWatchProvidersResponse.swift; sourceTree = "<group>"; };
 		DE4C5FD4E1D9835E3A6CBB3EE69B7597 /* TheMovieDbAPIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TheMovieDbAPIClient.debug.xcconfig; sourceTree = "<group>"; };
 		E009803153F9BD1DE92C802AD6FE2816 /* TheMovieDbAPIClient-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TheMovieDbAPIClient-dummy.m"; sourceTree = "<group>"; };
 		E7276B4C54FACA3D1BC1252DE4A6489F /* Pods-TheMovieDbAPIClient_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TheMovieDbAPIClient_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 		CFF7F50E2704DBF700DA2C73 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				CFF7F557270504D000DA2C73 /* Movie */,
 				CFF7F5302704E1CB00DA2C73 /* Search */,
 			);
 			path = API;
@@ -230,6 +235,23 @@
 				EF170B572704DB100059D7F9 /* TMDBSearchMovieResponse.swift */,
 			);
 			path = Movie;
+			sourceTree = "<group>";
+		};
+		CFF7F557270504D000DA2C73 /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7F55B270504D800DA2C73 /* WatchProviders */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		CFF7F55B270504D800DA2C73 /* WatchProviders */ = {
+			isa = PBXGroup;
+			children = (
+				CFF7F5672705058800DA2C73 /* TMDBMovieWatchProvidersRequest.swift */,
+				CFF7F56E270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift */,
+			);
+			path = WatchProviders;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -362,6 +384,9 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					B2BD4F4F4C8C357D6B8B9A363FB8BE96 = {
+						LastSwiftMigration = 1240;
+					};
 					C86C4E489622EF30DB9D562E90E6379F = {
 						LastSwiftMigration = 1250;
 					};
@@ -432,8 +457,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CFF7F5682705058800DA2C73 /* TMDBMovieWatchProvidersRequest.swift in Sources */,
 				CFF7F5242704DEEF00DA2C73 /* TMDBAPIRequest.swift in Sources */,
 				EF170B522704DAA20059D7F9 /* TMDBAPINetworkService.swift in Sources */,
+				CFF7F56F270505AD00DA2C73 /* TMDBMovieWatchProvidersResponse.swift in Sources */,
 				4E7F0B7667FAC3191F9F495AF679AD14 /* TMDBAPIService.swift in Sources */,
 				CFF7F51F2704DD0200DA2C73 /* TMDBSearchMovieRequest.swift in Sources */,
 				EF170B582704DB100059D7F9 /* TMDBSearchMovieResponse.swift in Sources */,
@@ -530,6 +557,7 @@
 			baseConfigurationReference = CEC9DF89D22FEF709F55F8DE7777B1BD /* Pods-TheMovieDbAPIClient_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -551,6 +579,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -658,6 +687,7 @@
 			baseConfigurationReference = 0DF908D9726C91E605C4673DDCB90009 /* Pods-TheMovieDbAPIClient_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -679,6 +709,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
