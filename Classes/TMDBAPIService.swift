@@ -3,7 +3,7 @@ import Foundation
 public final class TMDBAPIService {
     private let apiKey: String
     private let baseURL = URL(string: "https://api.themoviedb.org/3/")!
-    private var imagesConfiguration: TMDBImagesConfiguration?
+    private var imagesConfiguration: TMDBImagesConfiguration!
     private let network = TMDBAPINetworkService()
     
     public init(apiKey: String) {
@@ -43,27 +43,13 @@ public final class TMDBAPIService {
     }
     
     public func image(path: String, completion: @escaping (Result<Data?, Error>) -> Void) {
-        let group = DispatchGroup()
-        var configurationError: Error?
-        
-        if imagesConfiguration == nil {
-            group.enter()
-            
-            configure { error in
-                configurationError = error
-                
-                group.leave()
-            }
+        guard imagesConfiguration != nil else {
+            completion(.success(nil))
+            return
         }
         
-        group.notify(queue: .main) {
-            if let error = configurationError {
-                completion(.failure(error))
-            } else {
-                let url = self.imageURL(path: path)
-                self.network.sendRequest(url: url, completion: completion)
-            }
-        }
+        let url = self.imageURL(path: path)
+        self.network.sendRequest(url: url, completion: completion)
     }
     
     private func imageURL(path: String) -> URL {
