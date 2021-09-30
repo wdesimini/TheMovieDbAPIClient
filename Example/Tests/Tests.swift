@@ -2,6 +2,7 @@ import XCTest
 import TheMovieDbAPIClient
 
 class Tests: XCTestCase {
+    private let client = TMDBClient(apiKey: "")
     
     override func setUp() {
         super.setUp()
@@ -13,9 +14,19 @@ class Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testConfigurationAPIConfiguration() {
+        let expectation = XCTestExpectation(description: "get API Configuration details")
+        
+        let request = TMDBAPI.Configuration.APIConfiguration.Request()
+        
+        client.execute(request) { result in
+            let response = try? result.get()
+            XCTAssertNotNil(response)
+            dump(response)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5)
     }
     
     func testPerformanceExample() {
