@@ -29,6 +29,21 @@ class Tests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
+    func testMoviesWatchProviders() {
+        let expectation = XCTestExpectation(description: "find movie watch providers based on id")
+        
+        let movieId = 500
+        let request = TMDBAPI.Movies.WatchProviders.Request(movieId: movieId)
+        
+        client.execute(request) { result in
+            let response = try? result.get()
+            XCTAssertNotNil(response)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 5)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure() {
