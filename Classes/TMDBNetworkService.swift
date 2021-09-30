@@ -1,5 +1,5 @@
 //
-//  TMDBAPINetworkService.swift
+//  TMDBNetworkService.swift
 //  TheMovieDbAPIClient
 //
 //  Created by Desimini, Wilson on 9/29/21.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TMDBAPINetworkService {
+struct TMDBNetworkService {
     typealias Handler = (Result<Data?, Error>) -> Void
     
     func sendRequest(url: URL, completion: @escaping Handler) {
