@@ -42,13 +42,14 @@ public extension TMDBAPI.Search.Movies {
             public let genreIds: [Int]
             public let id: Int
             public let overview: String
+            public let originalLanguage: String?
             public let originalTitle: String
-            public let popularity: Double
+            public let popularity: Decimal
             public let posterPath: String?
             public let releaseDate: String
             public let title: String
-            public let voteAverage: Double
             public let video: Bool
+            public let voteAverage: Decimal
             public let voteCount: Int
         }
     }
