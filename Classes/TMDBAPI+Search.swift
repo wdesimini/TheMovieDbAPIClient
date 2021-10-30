@@ -20,7 +20,7 @@ public extension TMDBAPI.Search.Movies {
             self.page = String(page)
             self.query = query
         }
-        public var method: String { "GET" }
+        public var method: TMDBHTTPMethod { .get }
         public var parameters: [String : String] {
             [
                 "page": page,

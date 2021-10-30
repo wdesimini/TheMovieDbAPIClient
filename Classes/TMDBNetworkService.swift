@@ -10,9 +10,8 @@ import Foundation
 struct TMDBNetworkService {
     typealias Handler = (Result<Data?, Error>) -> Void
     
-    func sendRequest(url: URL, completion: @escaping Handler) {
+    func sendRequest(_ request: URLRequest, completion: @escaping Handler) {
         let session = URLSession.shared
-        let request = URLRequest(url: url)
         let task = session.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
                 completion(

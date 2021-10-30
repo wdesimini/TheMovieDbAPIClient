@@ -16,7 +16,7 @@ public extension TMDBAPI.Movies.WatchProviders {
         public typealias TMDBResponse = Response
         private let movieId: Int
         public init(movieId: Int) { self.movieId = movieId }
-        public var method: String { "GET" }
+        public var method: TMDBHTTPMethod { .get }
         public var parameters: [String : String] { [:] }
         public var path: String { "movie/\(movieId)/watch/providers" }
     }

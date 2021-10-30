@@ -18,9 +18,8 @@ public struct TMDBClient {
     }
     
     public func execute<T: TMDBRequest>(_ request: T, completion: @escaping T.Handler) {
-        let url = self.url(from: request)
-        
-        network.sendRequest(url: url) { result in
+        let request = self.urlRequest(from: request)
+        network.sendRequest(request) { result in
             do {
                 let data = try result.get()
                 let decoder = JSONDecoder()
@@ -42,5 +41,12 @@ public struct TMDBClient {
         headers["api_key"] = apiKey
         components.queryItems = headers.map { URLQueryItem(name: $0, value: $1) }
         return components.url!
+    }
+    
+    private func urlRequest<T: TMDBRequest>(from request: T) -> URLRequest {
+        let url = self.url(from: request)
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = request.method.rawValue
+        return urlRequest
     }
 }

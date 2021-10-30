@@ -15,7 +15,7 @@ public extension TMDBAPI.Configuration.APIConfiguration {
     struct Request: TMDBRequest {
         public typealias TMDBResponse = Response
         public init() {}
-        public var method: String { "GET" }
+        public var method: TMDBHTTPMethod { .get }
         public var parameters: [String : String] { [:] }
         public var path: String { "configuration" }
     }
