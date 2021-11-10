@@ -21,11 +21,11 @@ public extension TMDBAPI.Movies.WatchProviders {
         public var path: String { "movie/\(movieId)/watch/providers" }
     }
     
-    struct Response: Decodable {
+    struct Response: Codable {
         public let id: Int
         public let results: ResultsByCountry?
         
-        public struct ResultsByCountry: Decodable {
+        public struct ResultsByCountry: Codable {
             public let us: ResultsByCountry.Result?
             
             enum CodingKeys: String, CodingKey {
@@ -37,13 +37,13 @@ public extension TMDBAPI.Movies.WatchProviders {
                 us = try values.decodeIfPresent(ResultsByCountry.Result.self, forKey: .us)
             }
             
-            public struct Result: Decodable {
+            public struct Result: Codable {
                 public let buy: [ProviderResult]?
                 public let flatrate: [ProviderResult]?
                 public let link: String
                 public let rent: [ProviderResult]?
                 
-                public struct ProviderResult: Decodable {
+                public struct ProviderResult: Codable {
                     public let displayPriority: Int
                     public let logoPath: String
                     public let providerId: Int

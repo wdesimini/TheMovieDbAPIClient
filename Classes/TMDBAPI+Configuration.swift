@@ -22,11 +22,11 @@ public extension TMDBAPI.Configuration.APIConfiguration {
 }
 
 public extension TMDBAPI.Configuration.APIConfiguration {
-    struct Response: Decodable {
+    struct Response: Codable {
         public let images: Images?
         public let changeKeys: [String]?
         
-        public struct Images: Decodable {
+        public struct Images: Codable {
             public let backdropSizes: [String]?
             public let baseUrl: String?
             public let logoSizes: [String]?
