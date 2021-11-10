@@ -20,9 +20,9 @@ extension TMDBAPI.Image {
         }
         
         var url: URL {
-            baseURL
-                .appendingPathComponent(size)
-                .appendingPathComponent(filePath)
+            [size, filePath].reduce(baseURL) {
+                $0.appendingPathComponent($1)
+            }
         }
     }
     
