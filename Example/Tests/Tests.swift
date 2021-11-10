@@ -67,3 +67,19 @@ class Tests: XCTestCase {
     }
     
 }
+
+extension Encodable {
+    fileprivate func prettyPrint() {
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = {
+            if #available(iOS 13.0, *) {
+                return [.withoutEscapingSlashes, .prettyPrinted]
+            } else {
+                return [.prettyPrinted]
+            }
+        }()
+        let data = try? encoder.encode(self)
+        let jsonString = data.flatMap { String(data:$0, encoding: .utf8) }
+        jsonString.flatMap { print($0) }
+    }
+}
