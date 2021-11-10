@@ -10,7 +10,6 @@ import Foundation
 public struct TMDBClient {
     private let apiKey: String
     private let baseURL = URL(string: "https://api.themoviedb.org/3/")!
-//    private var imagesConfiguration: TMDBImagesConfiguration!
     private let network = TMDBNetworkService()
     
     public init(apiKey: String) {
@@ -32,6 +31,15 @@ public struct TMDBClient {
                 completion(.failure(error))
             }
         }
+    }
+    
+    public func execute(
+        _ imageRequest: TMDBAPI.Image.Request,
+        completion: @escaping TMDBAPI.Image.Response.Handler
+    ) {
+        let url = imageRequest.url
+        let request = URLRequest(url: url)
+        network.sendRequest(request, completion: completion)
     }
     
     private func url<T: TMDBRequest>(from request: T) -> URL {

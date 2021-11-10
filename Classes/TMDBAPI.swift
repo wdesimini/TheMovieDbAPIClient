@@ -9,6 +9,7 @@ import Foundation
 
 public struct TMDBAPI {
     public struct Configuration {}
+    public struct Image {}
     public struct Movies {}
     public struct Search {}
 }

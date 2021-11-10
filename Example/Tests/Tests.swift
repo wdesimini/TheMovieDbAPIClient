@@ -29,6 +29,50 @@ class Tests: XCTestCase {
         wait(for: [expectation], timeout: 5)
     }
     
+    func testImageLogo() {
+        // get config
+        let configExpectation = XCTestExpectation(description: "fetch api configuration")
+        let configRequest = TMDBAPI.Configuration.APIConfiguration.Request()
+        var configResponse: TMDBAPI.Configuration.APIConfiguration.Response? = nil
+        
+        client.execute(configRequest) { result in
+            configResponse = try? result.get()
+            XCTAssertNotNil(configResponse)
+            XCTAssertNotNil(configResponse?.images?.secureBaseUrl)
+            XCTAssertTrue(!(configResponse?.images?.logoSizes?.isEmpty ?? true))
+            configExpectation.fulfill()
+        }
+        
+        // get logo path
+        let watchProviderExpectation = XCTestExpectation(description: "fetch watch provider")
+        let movieId = 500
+        let movieWatchProvidersRequest = TMDBAPI.Movies.WatchProviders.Request(movieId: movieId)
+        var movieWatchProvidersResponse: TMDBAPI.Movies.WatchProviders.Response? = nil
+        
+        client.execute(movieWatchProvidersRequest) { result in
+            movieWatchProvidersResponse = try? result.get()
+            XCTAssertNotNil(movieWatchProvidersResponse?.results?.us?.rent?.first?.logoPath)
+            watchProviderExpectation.fulfill()
+        }
+        
+        wait(for: [configExpectation, watchProviderExpectation], timeout: 5)
+        
+        // get logo image data
+        let logoImageExpectation = XCTestExpectation(description: "fetch logo image data from url")
+        let baseURL = URL(string: configResponse!.images!.secureBaseUrl!)!
+        let filePath = movieWatchProvidersResponse!.results!.us!.rent!.first!.logoPath
+        let size = configResponse!.images!.logoSizes!.last!
+        let imageRequest = TMDBAPI.Image.Request(baseURL: baseURL, filePath: filePath, size: size)
+        
+        client.execute(imageRequest) { result in
+            let imageData = try? result.get()
+            XCTAssertNotNil(imageData)
+            logoImageExpectation.fulfill()
+        }
+        
+        wait(for: [logoImageExpectation], timeout: 5)
+    }
+    
     func testMoviesWatchProviders() {
         let expectation = XCTestExpectation(description: "find movie watch providers based on id")
         
